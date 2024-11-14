@@ -48,4 +48,4 @@ for dict_list in list_of_dicts:
 		else:
 			dict_rez[key] = {value}
 for key,value in dict_rez.items():
-	print(f"'{key}': {value}")
+	print(f"{key!r}: {value}")
