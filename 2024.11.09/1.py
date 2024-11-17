@@ -4,3 +4,8 @@ if '@' in email and '.' in email.split('@')[1][2:]:
 else:
 	print('нет')
 	
+# sgd@ya.ru
+# да
+#	
+# abcde@fghij
+# нет	

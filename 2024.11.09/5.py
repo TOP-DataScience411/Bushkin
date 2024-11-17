@@ -15,4 +15,5 @@ for key,value in scores_letters.items():
 score = sum([leter_score[char] for char in input().upper()])
 print(score)
 
- 
+# синхрофазотрон
+# 29 

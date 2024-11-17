@@ -8,4 +8,10 @@ for i in range(len(list_1) - len(list_2) + 1):
 else:
 	print('нет')
 
-	
+# 1 2 3 4
+# 1 2
+# да	
+ 
+# 1 2 3 4
+# 2 4
+# нет

@@ -3,3 +3,7 @@ if input()[:2] in set_bin:
 	print('да')
 else:
 	print('нет')
+	
+	
+# 1b0101
+# нет

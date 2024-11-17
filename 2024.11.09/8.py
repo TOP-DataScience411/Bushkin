@@ -15,3 +15,14 @@ for elem in list_input:
 print(*list_out,sep = '\n')
 	
 	
+# 1.py; 1.py; src.tar.gz; aux.h; main.cpp; functions.h; main.cpp; 1.py; main.cpp; src.tar.gz
+# 1.py
+# 1_2.py
+# 1_3.py
+# src.tar.gz
+# src_2.tar.gz
+# aux.h
+# main.cpp
+# main_2.cpp
+# main_3.cpp
+# functions.h
