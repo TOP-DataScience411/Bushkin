@@ -9,7 +9,5 @@ for i in range(10**(n-1),10**n):
                 count += 1
 print(count)
 
-
 # 3
-# 143
-		
+# 143	
