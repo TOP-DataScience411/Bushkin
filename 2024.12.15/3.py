@@ -44,6 +44,6 @@ class ChessKing:
 # >>> wk.turn('d4')
 # 
 # ValueError
-# >>> wk.turn('e2')
+# >>> wk.turn('e2') 
 # >>> wk
 # 'WK: e2'
