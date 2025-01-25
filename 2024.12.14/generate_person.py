@@ -12,7 +12,11 @@ def load_data():
 
 	with open(r'D:\Bushkin\2024.12.14\data\names\фамилии.txt',encoding = ' utf-8') as file:
 		content = file.readlines()
-		second_name = [line.strip().split(', ') for line in content]   		
+		second_name = [line.strip().split(', ') for line in content]
+		second_name = [elem if len(elem)==2 else [elem[0],elem[0]]  for elem in second_name]
+		
+		
+		#second_name = [line.strip().split(', ') for line in content]   		
 	
 	with open(r'D:\Bushkin\2024.12.14\data\names\мужские_имена_отчества.txt',encoding = ' utf-8') as file:
 		content = file.readlines()
@@ -41,40 +45,23 @@ def load_data():
 
 def generate_person():
 	""" Генерирует анкету человека со случайными данными."""
-	data_start = datetime(1900,1,1)
-	data_end = datetime(1999,12,31)
+	data_start = date(1900,1,1)
+	data_end = date(1999,12,31)
 	data = data_start + timedelta(days = randint(0,(data_end - data_start).days))
 	n = randint(0,1)
 	dict_pers = {'имя':list_names[randint(0,len(list_names))][n],
 	             'отчество': otchestva[randint(0,len(otchestva))][n],
 				 'фамилия': second_name[randint(0,len(second_name))][n],
 			     'пол': ['мужской','женский'][n],
-				 'дата рождения': data.date(),
+				 'дата рождения': data,
 				  'мобильный': '+79'+ str(randint(0,999999999))}
 	
 	return dict_pers
 	
 def rand_date(from_year = 2000):
-	date_today = date.today()
-	date_start = datetime(from_year,1,1)
+	data_today = date.today()
+	data_start = date(from_year,1,1)
 	data = data_start + timedelta(days = randint(0,(data_today - data_start).days))
-	return date.date()
+	return data
 	
 load_data()	
-#  pprint(generate_person(), sort_dicts=False)
-#   {'имя': 'Оксана',
-#    'отчество': 'Александровна',
-#    'фамилия': 'Вертоградская',
-#    'пол': 'женский',
-#    'дата рождения': datetime.date(1927, 1, 1),
-#    'мобильный': '+79334235893'}
-
-
-#  pprint(generate_person(), sort_dicts=False)
-#   {'имя': 'Альфред',
-#    'отчество': 'Васильевич',
-#    'фамилия': 'Парнасский',
-#    'пол': 'мужской',
-#    'дата рождения': datetime.date(1917, 12, 8),
-#    'мобильный': '+79628657323'}
-	
